@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/shop.css">
+    <link rel="stylesheet" type="text/css" href="css/description-product.css">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantata+One" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-form-container">
+        <div class="container">
+            <div class="form-search">
+                <button type="button" class="navbar-toggle" id="menu-scroll">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <form action="#" id="search_form">
+                    <div class="search-wrap">
+                        <input type="text" name="q" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+                        <button type="submit">
+                            <span>Tìm Kiếm</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="header-link">
+                <div class="user-profile ">
+                    <div class="before-log">
+                        <button data-toggle="modal" data-tabs="login" data-target=".user-modal" class="user">Đăng nhập
+                        </button>
+                        <button data-toggle="modal" data-tabs="signup" data-target=".user-modal" class="user">Đăng ký
+                        </button>
+                    </div>
+                    <div class="logged">
+                        <!-- <i class="fa fa-user-o"></i> -->
+                        <img src="img/feedback_1.jpg">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                Đỗ Hoàng Hiếu
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="user-account.html">Tài khoản của tôi</a></li>
+                                <li><a href="order.html">Đơn hàng của tôi</a></li>
+                                <li><a href="wishlist.html">Danh sách Yêu thích</a></li>
+                                <li><a href="home.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-cart">
+                    <div class="cart-box mycart">
+                        <a href="cart.html" class="header-cart item">
+                            <i class="fa fa-shopping-cart"></i>
+                            Giỏ Hàng
+                            <span class='cart-count total'>0</span>
+                        </a>
+                        <a href="wishlist.html" class="header-cart item">
+                            <i class="fa fa-heart-o"></i>
+                            Yêu Thích
+                            <span class='cart-count'>0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="menu row">
+                <div class="collapse navbar-collapse" id="menu-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="home.html">Trang chủ</a></li>
+                        <li><a href="shop.html">Sản phẩm</a></li>
+                        <li><a href="project.html">Dự án</a></li>
+                        <li><a href="colllection.html">Bộ sưu tập</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="about.html">Về Min</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <a class="logo" href="home.html"><img src="img/logo-min.png"></a>
+        <div id="search-form">
+            <form>
+                <input type="text" placeholder="Nhập từ khóa cần tìm">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+    <div class="modal fade user-modal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li id="login-indicator" class="active">
+                        <a href="#login" role="tab" data-toggle="tab">Đăng nhập</a>
+                    </li>
+                    <li id="signup-indicator">
+                        <a href="#signup" role="tab" data-toggle="tab">Đăng ký</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active fade in" id="login">
+                        <form>
+                            <div class="input-field">
+                                <input type="email" name="Email" id="email" placeholder="Email"/>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" name="Password" id="password" placeholder="Mật khẩu"/>
+                            </div>
+                            <div class="input-field check-field">
+                                <input type="checkbox" id="remember" name="remember"/><label for="remember">Ghi nhớ tài
+                                khoản</label><br/>
+                            </div>
+                            <div class="input-field">
+                                <input id="login-btn" data-dismiss="modal" value="Đăng nhập"/>
+                            </div>
+                            <button data-toggle="modal" data-target="#reset-password" data-dismiss="modal"
+                                    class="btn btn-default"><i class="fa fa-question-circle-o"></i> Quên mật khẩu?
+                            </button>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="signup">
+                        <form>
+                            <div class="input-field">
+                                <input type="email" name="Email" id="email" placeholder="Email"/>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" name="Password" id="password" placeholder="Mật khẩu"/>
+                            </div>
+                            <div class="input-field check-field">
+                                <input type="checkbox" id="remember" name="remember"/><label for="remember">Hiển thị mật
+                                khẩu</label><br/>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="Name" id="name" placeholder="Họ tên"/>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="Phone" id="phone" placeholder="Số điện thoại"/>
+                            </div>
+                            <div class="input-field">
+                                <input id="signup-btn" type="submit" value="Đăng ký"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid page-heading shop-heading">
+    <div class="heading-content">
+        <h1>Sản phẩm</h1>
+        <p>Mỗi món đồ là một câu chuyện nhỏ. MIN cùng bạn viết nên câu chuyện ngôi nhà mình.</p>
+        <ol class="breadcrumb">
+            <li><a href="home.html">Trang chủ</a></li>
+            <li class="active">Sản phẩm</li>
+        </ol>
+    </div>
+</div>
+<div class="container shop-main">
+    <div class="row">
+        <nav class="navbar navbar-default" id="shop-menu">
+            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="slide-collapse"
+                    data-target=".shop-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pull-left shop-nav">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <form>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lọc theo hãng sản xuất <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="checkbox"><label><input type="checkbox" name="brand1"
+                                                                   value="brand1">IKEA</label></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><label><input type="checkbox" name="brand2"
+                                                                   value="brand2">Hooker</label></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><label><input type="checkbox" name="brand3"
+                                                                   value="brand3">Ashley</label></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><label><input type="checkbox" name="brand4" value="brand4">Stanford</label>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><label><input type="checkbox" name="brand5" value="brand5">Stickley</label>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <form>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lọc theo mức giá <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="checkbox"><input type="checkbox" name="price1" value="price1">Dưới 1 triệu
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="price2" value="price2">Từ 1 triệu đến
+                                    3 triệu
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="price3" value="price3">Từ 3 triệu đến
+                                    5 triệu
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="price4" value="price4">Từ 5 triệu đến
+                                    10 triệu
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="price5" value="price5">Trên 10 triệu
+                                </li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <form>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lọc theo màu sắc <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="checkbox"><input type="checkbox" name="color1" value="color1">Đen</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color2" value="color2">Trắng</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color3" value="color3">Nâu</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color4" value="color4">Xám</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color5" value="color5">Xanh lá</li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <form>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lọc theo Chất liệu <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="checkbox"><input type="checkbox" name="color1" value="color1">Gỗ</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color2" value="color2">Kính</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color3" value="color3">Plastic</li>
+                                <li role="separator" class="divider"></li>
+                                <li class="checkbox"><input type="checkbox" name="color4" value="color4">Kim loại</li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <select class="form-control pull-right">
+                <option disabled selected hidden>Sắp xếp</option>
+                <option value="sort1">Thứ tự mặc định</option>
+                <option value="sort2">Thứ tự theo sản phẩm mới</option>
+                <option value="sort3">Thứ tự theo giá: thấp đến cao</option>
+                <option value="sort4">Thứ tự theo giá: cao đến thấp</option>
+                <option value="sort5">Thứ tự theo lượng review</option>
+            </select>
+        </nav>
+
+        <div class="product-list">
+
+            <!--------- menu danh muc san pham start ----------------------->
+            <ul class="nav nav-stacked col-xs-3 collapse navbar-collapse shop-nav">
+                <li class="nav-title"><a data-toggle="display-all"><h4>Danh mục </h4></a></li>
+                <li>
+                    <button class=" product-group" type="button"><h4>Thiết kế theo phòng</h4>
+                    </button>
+                </li>
+                <li>
+                    <ul class="nested-tab">
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Phòng khách</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#1">Coffee & Accent Tables</a></li>
+                                <li><a href="#2">Chairs</a></li>
+                                <li><a href="#3">Sofas & Sectionals</a></li>
+                                <li><a href="#4">Media Storage</a></li>
+                                <li><a href="#5">Bookcases</a></li>
+                                <li><a href="#6">Footstools & Ottomans</a></li>
+                                <li><a href="#7">Accent Chests & Cabinets</a></li>
+                                <li><a href="#8">Futons & Accessories</a></li>
+                                <li><a href="#9">Slipcovers & Chair Covers</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Phòng Ăn</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#1">Bar Stools & Counter Stools</a></li>
+                                <li><a href="#2">Dining Chairs</a></li>
+                                <li><a href="#3">Dining Tables</a></li>
+                                <li><a href="#4">Buffets & Sideboards</a></li>
+                                <li><a href="#5">Dining Sets</a></li>
+                                <li><a href="#6">Kitchen Islands & Carts</a></li>
+                                <li><a href="#7">Dining Tables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Phòng Tắm</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Bathroom Vanities</a></li>
+                                <li><a href="#">Medicine Cabinets</a></li>
+                                <li><a href="#">Vanity Tops & Side Splashes</a></li>
+                                <li><a href="#">Bathroom Organizers</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button"><h5>Phòng Làm Việc</h5></button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Desks</a></li>
+                                <li><a href="#">Office Chairs</a></li>
+                                <li><a href="#">Bookcases</a></li>
+                                <li><a href="#">Filing Cabinets</a></li>
+                                <li><a href="#">Drafting Tables</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Phòng Ngủ</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Beds</a></li>
+                                <li><a href="#">Headboards</a></li>
+                                <li><a href="#">Dressers</a></li>
+                                <li><a href="#">Nightstands & Bedside Tables</a></li>
+                                <li><a href="#">Bedroom Furniture Sets</a></li>
+                                <li><a href="#">Bedroom & Makeup Vanities</a></li>
+                                <li><a href="#">Vanity Stools & Benches</a></li>
+                                <li><a href="#">Armoires & Wardrobes</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Chứa đồ</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Bookcases</a></li>
+                                <li><a href="#">Media Storage</a></li>
+                                <li><a href="#">Dining Tables</a></li>
+                                <li><a href="#">Buffets & Sideboards</a></li>
+                                <li><a href="#">Dining Sets</a></li>
+                                <li><a href="#">Kitchen Islands & Carts</a></li>
+                                <li><a href="#">Dining Tables</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li style="height: 15px"></li>
+                <li>
+                    <button class=" product-group" type="button">
+                        <h4>Lựa chọn theo sản phẩm</h4>
+                    </button>
+                </li>
+                <li>
+                    <ul class="nested-tab">
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Nệm & Giường Ngủ</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Giường Ngủ</a></li>
+                                <li><a href="#">Nệm</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Ghế, Đôn & Ghế Dài</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Ghế Ăn</a></li>
+                                <li><a href="#">Đôn có bậc & Thang</a></li>
+                                <li><a href="#">Đôn & Ghế Dài</a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Đồ Trang Trí</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Đồng Hồ</a></li>
+                                <li><a href="#">Khung Ảnh</a></li>
+                                <li><a href="#">Tranh Ảnh</a></li>
+                                <li><a href="#">Lọ Hoa</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Bàn Ghế Văn Phòng</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Bàn Làm Việc</a></li>
+                                <li><a href="#">Ghế Văn Phòng & Ghế Dài</a></li>
+                                <li><a href="#">Tranh Ảnh</a></li>
+                                <li><a href="#">Lọ Hoa</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Dụng Cụ Nhà Bếp</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Tiện Ích Sắp Xếp Nhà Bếp</a></li>
+                                <li><a href="#">Dụng Cụ Sơn Chế</a></li>
+                                <li><a href="#">Bảo Quản Thực Phẩm</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Nội Thất Bếp</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Tủ Bếp</a></li>
+                                <li><a href="#">Tiện Ích Lưu Trữ Nhà Bếp</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Đèn</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Đèn Trần</a></li>
+                                <li><a href="#">Đèn Đứng</a></li>
+                                <li><a href="#">Đèn Bàn</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <button class="sub-group" type="button">
+                                <h5>Gương</h5>
+                            </button>
+                            <ul class="submenu-content">
+                                <div class="sign"><i class="fa  fa-caret-right"></i></div>
+                                <li><a href="#">Gương Đứng</a></li>
+                                <li><a href="#">Gương Trang Điểm</a></li>
+                                <li><a href="#">Gương Treo Tường</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!---------- end menu danh muc san pham ------------------------>
+
+            <div class="item-list col-xs-12 col-sm-9">
+                <div class="row">
+                    <div class="col-item chair arm-chair col-xs-6 col-lg-4">
+                        <div class="item-container">
+                            <div class="photo">
+                                    <img src="img/product_1a.jpg">
+                                <div class="vertical-icon">
+                                    <a href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a href="javascript:void(0)" class="buy"><i class="fa fa-shopping-cart"></i></a>
+                                    <a href="shop-detail.html"><i class="fa fa-search-plus"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="name description">
+                                <h3><a href="#">Eros Papasan</a></h3>
+                                <p><a href="#">by Kartell</a></p>
+                                <p>
+                                   <span class="price">
+                                        <del class="sale-off">$69.36</del>
+                                    <strong>$99.21</strong>
+                                   </span>
+                                </p>
+                                
+                                <div class="rating">
+                                    <span id="star1" class="star fa fa-star" data-rating="1"></span>
+                                    <span id="star2" class="star fa fa-star" data-rating="2"></span>
+                                    <span id="star3" class="star fa fa-star" data-rating="3"></span>
+                                    <span id="star4" class="star fa fa-star" data-rating="4"></span>
+                                    <span id="star5" class="star fa fa-star" data-rating="5"></span>
+                                    <span id="numberStar">&#40<span id="number_rating">1</span>&#41</span>
+                                </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="pagination">
+                        <a class="prev page-no" href="#">
+                            <i class="fa fa-long-arrow-left"></i>
+                        </a>
+                        <a href="#" class="page-no">1</a>
+                        <a href="#" class="page-no current">2</a>
+                        <a href="#" class="page-no">3</a>
+                        <a href="#" class="page-no">4</a>
+                        <a href="#" class="page-no">5</a>
+                        <a class="next page-no" href="#">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#"><i class="fa fa-angle-up back-top"></i></a>
+<footer>
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-xs-6 col-md-3 footer-item">
+                <h4>Thông tin liên hệ</h4>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i>Đ/c: 40 Giảng Võ, Đống Đa, Hà Nội</li>
+                    <li><i class="fa fa-mobile"></i>Hotline: 0986090925</li>
+                    <li><i class="fa fa-envelope-o"></i>Email: hieu.do212@gmail.com</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 footer-item">
+                <h4>Thời gian mở cửa</h4>
+                <ul>
+                    <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+                    <li>Thứ 7: 9AM - 8PM</li>
+                    <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 footer-item">
+                <h4>Hỗ trợ khách hàng</h4>
+                <ul>
+                    <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng online</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 footer-item">
+                <h4>Chính sách mua hàng</h4>
+                <ul>
+                    <li><a href="#">Chính sách bảo hành, đổi trả</a></li>
+                    <li><a href="#">Chính sách hội viên</a></li>
+                    <li><a href="#">Giao hàng và lắp đặt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-bot">
+            <a href="#" title="Kết nối qua Facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" title="Kết nối qua Google+"><i class="fa fa-google-plus-official"></i></a>
+            <a href="#" title="Kết nối qua Pinterest"><i class="fa fa-pinterest"></i></a>
+            <a href="#" title="Kết nối qua Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="container-fluid copyright">
+        <div class="row">
+            <p>Copyright 2017 <i class="fa fa-copyright"></i> Designed by Hieudo</p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+    var sum = 0;
+    $(".buy").click(function () {
+        $(this).each(function () {
+            sum += 1
+        })
+        $('.total').text(sum)
+    })
+</script>
+<script type="text/javascript">
+    
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > 460) {
+            $('header').addClass('fixed')
+            $('button#menu-scroll.navbar-toggle').css('display', 'block')
+            $('header').css('height', '71px')
+        } else {
+            $('header').removeClass('fixed')
+            $('button#menu-scroll.navbar-toggle').css('display', 'none')
+            $('header').css('height', '151px')
+        }
+    });
+    var click = 'onclicked'
+    var temp = 1
+    $(".form-search button").click(function () {
+        /********************
+         * Using if*/
+        if (click === 'onclicked') {
+            $('header').css('height', '151px');
+            $('header .navbar').css('display', 'flex');
+            click = 'clicked again'
+        } else if (click === 'clicked again') {
+            $('header').css('height', '71px');
+            $('header .navbar').css('display', 'none');
+            click = 'onclicked';
+        }
+        /*******************/
+
+        /*******************
+         * Using switch ... case
+         switch (temp) {
+            case (1): {
+                $('header').css('height', '151px')
+                $('header .navbar').css('display', 'flex')
+                console.log(temp)
+                temp++
+            }
+                break
+            case(2): {
+                $('header').css('height', '71px')
+                $('header .navbar').css('display', 'none')
+                console.log(temp)
+                temp--
+            }
+                break
+            default:
+        }
+         /*******************/
+        $(window).bind('scroll', function () {
+            if (click === 'onclicked' && $(window).scrollTop() < 460) {
+                $('header .navbar').css('display', 'flex');
+            } else if (click === 'onclicked' && $(window).scrollTop() > 460) {
+                $('header .navbar').css('display', 'none');
+            }
+        })
+    });
+</script>
+</body>
+</html>
