@@ -1,23 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <header>
+      <header-form></header-form>
+      <nav-menu></nav-menu>
+    </header>
+    <img src="./assets/img/logo.png">
+    <!--<router-view></router-view>-->
+    <footer-bar></footer-bar>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-};
+
+  import FooterBar from '@/components/layout/FooterBar';
+  import NavMenu from '@/components/layout/NavMenu';
+  import HeaderForm from '@/components/layout/HeaderForm';
+
+  export default {
+    name: 'app',
+    components: { FooterBar, NavMenu, HeaderForm },
+  };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  header {
+    height: 151px;
+    position: relative;
+    z-index: 1050;
+  }
+
 </style>
