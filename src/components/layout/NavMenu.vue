@@ -37,8 +37,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    width: 33.33%;
+    right: -40px;
+    width: 20%;
     margin: auto;
     text-align: center;
   }

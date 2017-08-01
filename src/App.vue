@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <header>
-      <header-form></header-form>
-      <nav-menu></nav-menu>
-    </header>
-    <img src="./assets/img/logo.png">
+    <header-bar></header-bar>
+    <img id="vue" src="./assets/img/logo.png">
     <!--<router-view></router-view>-->
     <footer-bar></footer-bar>
   </div>
@@ -13,20 +10,16 @@
 <script>
 
   import FooterBar from '@/components/layout/FooterBar';
-  import NavMenu from '@/components/layout/NavMenu';
-  import HeaderForm from '@/components/layout/HeaderForm';
+  import HeaderBar from '@/components/layout/HeaderBar';
 
   export default {
     name: 'app',
-    components: { FooterBar, NavMenu, HeaderForm },
+    components: { HeaderBar, FooterBar },
   };
 </script>
 
 <style>
-  header {
-    height: 151px;
-    position: relative;
-    z-index: 1050;
+  #vue {
+    height: 350px
   }
-
 </style>

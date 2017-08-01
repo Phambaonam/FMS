@@ -1,0 +1,135 @@
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+
+<style>
+  a, a:hover {
+    text-decoration: none;
+  }
+</style>
+
+<div id="fake-nav">
+  <a href="#register" @click="open('register', $event)" class="btn">Đăng nhập</a>
+  <a href="#login" @click="open('login', $event)" class="btn">Đăng ký</a>
+</div>
+
+<div class="user-modal-container" :class="{ 'active': active }" id="login-modal" @click="close">
+  <div class="user-modal">
+    <div class="modal-content">
+      <ul class="form-switcher">
+        <li @click="flip('register',$event)"><a href="" id="register-form">Đăng ký</a></li>
+        <li @click="flip('login',$event)"><a href="" id="login-form">Đăng nhập</a></li>
+      </ul>
+      <div class="form-register" :class="{ 'active': active == 'register' }" id="form-register">
+        <div class="error-message" v-text="registerError"></div>
+        <input type="text" name="name" placeholder="Họ tên" v-model="registerName">
+        <input type="email" name="email" placeholder="Email" v-model="registerEmail">
+        <input type="password" name="password" placeholder="Mật khẩu" v-model="registerPassword">
+        <input type="submit" :class="{ 'disable': submitted == 'register' }" @click="submit('register',$event)" v-model="registerSubmit" id="registerSubmit">
+        <div class="links"><a href="" @click="flip('login',$event)">Bạn đã có tài khoản?</a></div>
+      </div>
+      <div class="form-login" :class="{ 'active': active == 'login' }" id="form-login">
+        <div class="error-message" v-text="loginError"></div>
+        <input type="text" name="user" placeholder="Email" v-model="loginUser">
+        <input type="password" name="password"  placeholder="Password" v-model="loginPassword" v-model="loginPassword">
+        <input type="submit" :class="{ 'disabled': submitted == 'login' }" @click="submit('login', $event)" v-model="loginSubmit" id="loginSubmit">
+        <div class="links"><a href="" @click="flip('password',$event)">Quên mật khẩu?</a></div>
+      </div>
+      <div class="form-password" :class="{ 'active': active == 'password' }" id="form-password">
+        <div class="error-message" v-text="passwordError"></div>
+        <input type="text" name="email" placeholder="Email" v-model="passwordEmail">
+        <input type="submit" :class="{ 'disabled': submitted == 'password' }" @click="submit('password',$event)" v-model="passwordSubmit" id="passwordSubmit">
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/vue@2.4.2"></script>
+<script>
+  var modal_submit_register = 'Đăng ký'
+  var modal_submit_password = 'Cấp lại mật khẩu'
+  var modal_submit_login = 'Đăng nhập'
+  var modal = new Vue({
+    el: '#login-modal',
+    data: {
+      active:null,
+      submitted: null,
+
+      // Submit button text
+      registerSubmit: modal_submit_register ,
+      passwordSubmit: modal_submit_password,
+      loginSubmit: modal_submit_login,
+
+      // modal text filed
+      registerName: '',
+      registerEmail: '',
+      registerPassword: '',
+      loginUser: '',
+      loginPassword: '',
+      passwordEmail: '',
+
+      // Modal error messages
+      registerError: '',
+      loginError: '',
+      passwordError: '',
+    },
+    methods: {
+      close: function(event){
+        event.preventDefault()
+        if(event.target === this.$el){
+           this.active = null
+        }
+      },
+      flip: function(which, event){
+        event.preventDefault()
+        if(which !== this.active){
+          this.active = which
+        }
+      },
+      submit: function(which, event){
+        event.preventDefault()
+        this.submitted = which
+        var data = {
+          form: which
+        }
+
+        switch(which){
+          case 'register':
+          {
+            data.name = this.registerName
+            data.email = this.registerEmail
+            data.password = this.registerPassword
+//            this.$set('registerSubmit', 'Registering...')
+          }
+          break;
+
+          case 'login':
+          {
+            data.user = this.loginUser
+            data.password = this.loginPassword
+//            this.$set('loginSubmit', 'Logging In...')
+          }
+          break;
+
+          case 'password':
+          {
+            data.email = this.passwordEmail
+//            this.$set('passwordSubmit','Resetting Password...')
+          }
+          break;
+        }
+      }
+    }
+
+  });
+
+  var nav = new Vue({
+   el: '#fake-nav',
+   methods:{
+       open: function(which,event){
+         event.preventDefault()
+         modal.active = which
+       },
+   }
+ });
+</script>
