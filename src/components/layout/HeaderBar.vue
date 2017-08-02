@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import HeaderForm from '@/components/layout/HeaderForm';
-  import NavMenu from '@/components/layout/NavMenu';
+  import HeaderForm from './HeaderForm';
+  import NavMenu from './NavMenu';
 
   export default {
     components: { HeaderForm, NavMenu },

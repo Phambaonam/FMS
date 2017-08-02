@@ -4,16 +4,14 @@
       <div class="menu row">
         <div class="collapse navbar-collapse" id="menu-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="home.html">Trang chủ</a></li>
-            <li><a href="shop.html">Sản phẩm</a></li>
-            <li><a href="project.html">Dự án</a></li>
-            <li><a href="colllection.html">Bộ sưu tập</a></li>
+            <li v-for="link in navbarLeft">
+              <router-link :to="link.link">{{ link.name }}</router-link>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="event.html">Event</a></li>
-            <li><a href="about.html">Về Min</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
+            <li v-for="link in navbarRight">
+              <router-link :to="link.link">{{ link.name }}</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -21,7 +19,29 @@
     <a class="logo" href="home.html"><img src="static/img/logo-min.png"></a>
   </nav>
 </template>
-<style>
+
+<script>
+  export default {
+    data() {
+      return {
+        navbarLeft: [
+          { link: '/', name: 'TRANG CHỦ' },
+          { link: '/product', name: 'SẢN PHẨM' },
+          { link: '/project', name: 'DỰ ÁN' },
+          { link: '/collection', name: 'BỘ SƯU TẬP' },
+        ],
+        navbarRight: [
+          { link: '/event', name: 'Event' },
+          { link: '/about', name: 'VỀ MIN' },
+          { link: '/blog', name: 'Blog' },
+          { link: '/contact', name: 'LIÊN HỆ' },
+        ],
+      };
+    },
+  };
+</script>
+
+<style scoped>
   .navbar {
     background: #fff;
     display: flex;

@@ -15,10 +15,40 @@ h5 {
 label {
     margin-left: -20px;
 }
+
 a {
   color: #000;
+  transition: all 0.4s ease;
 }
 a , a:hover {
   text-decoration: none;
 }
+ul li {
+  display: inline;
+}
 
+.pagination {
+  width: 100%;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.pagination a.page-no {
+  text-decoration: none;
+  font-size: 16px;
+  /* padding: 5px 10px; */
+  /* color: #333333; */
+  font-weight: bold;
+  display: inline-block;
+  margin: 5px 2px;
+  background: transparent;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.pagination a.page-no.current, .pagination a.page-no:hover {
+  background: #336699;
+  color: #fff;
+}

@@ -22,7 +22,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   .header-form-container {
     position: relative;
     z-index: 3;

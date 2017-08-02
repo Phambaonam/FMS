@@ -1,4 +1,8 @@
-# furniture-mon-store
+# furniture-mon-store ( sau khi làm xong bằng express + nunjuck sẽ quay lại sau )
+## Project này cần dùng:
+* vue router.
+* vuex.
+* to be continue ...
 
 > A Vue.js project
 
